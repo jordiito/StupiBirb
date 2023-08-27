@@ -1,2 +1,3 @@
 # StupiBirb
-Stupi birb
+
+Learning Unity :)
