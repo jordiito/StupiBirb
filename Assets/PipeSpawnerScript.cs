@@ -14,7 +14,7 @@ public class PipeSpawnerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spawnPipe();
+        SpawnPipe();
         
     }
 
@@ -27,15 +27,20 @@ public class PipeSpawnerScript : MonoBehaviour
         }
         else
         {
-            spawnPipe();
+            SpawnPipe();
             timer = 0;
         }
     }
 
-    void spawnPipe()
+    void SpawnPipe()
     {
-        float lowestPoint = transform.position.y - heightOffset;
-        float highestPoint = transform.position.y + heightOffset;
-        Instantiate(pipe, new Vector3(transform.position.x, Random.Range(lowestPoint, highestPoint), 0), transform.rotation);
+        //float lowestPoint = transform.position.y - heightOffset;
+        //float highestPoint = transform.position.y + heightOffset;
+        //Instantiate(pipe, new Vector3(transform.position.x, Random.Range(lowestPoint, highestPoint), 0), transform.rotation);
+
+
+        float setY = Random.Range(-6, 6);
+
+        Instantiate(pipe, new Vector3(transform.position.x, setY, 0), transform.rotation);
     }
 }
